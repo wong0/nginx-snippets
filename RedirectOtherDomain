@@ -1,0 +1,8 @@
+server {
+  listen 80;
+  server_name www.yourdomain.com;
+
+  location /redirect-url {
+     return 301 http://otherdomain.com;
+  }
+}
