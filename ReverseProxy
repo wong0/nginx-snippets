@@ -1,0 +1,10 @@
+COPY
+server {
+  listen 80;
+  server_name yourdomain.com;
+
+  location / {
+     # where 0.0.0.0:3000 is your application server, bound on 0.0.0.0 listening on port 3000
+     proxy_pass http://0.0.0.0:3000;
+  }
+}
